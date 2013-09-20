@@ -3,94 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <title>Context Menu Example</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />    
+    <link rel="stylesheet" type="text/css" href="css/spinner.css" media="all" />
     <style type="text/css" media="screen">
-        a, a:hover { text-decoration:none; }
+        
+        
     </style>
 </head>
 <body>
-    <table id="sampleList" class="table">
-        <thead>
-            <tr>
-                <th>Header#1</th>
-                <th>Header#2</th>
-                <th>Header#3</th>
-                <th>Header#4</th>
-                <th class="actions">Header#5</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Data#1</td>
-                <td>Data#1</td>
-                <td>Data#1</td>
-                <td>Data#1</td>
-                <td class="actions">
-                    <a href="javascript:void(0)" class="view" data-id="1">
-                        <span class="glyphicon glyphicon-eye-open"></span> View
-                    </a> <a href="javascript:void(0)" class="delete" data-id="1">
-                        <span class="glyphicon glyphicon-trash"></span> Delete
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>Data#2</td>
-                <td>Data#2</td>
-                <td>Data#2</td>
-                <td>Data#2</td>
-                <td class="actions"><a href="javascript:void(0)" class="view" data-id="2">
-                        <span class="glyphicon glyphicon-eye-open"></span> View
-                    </a><a href="javascript:void(0)" class="delete" data-id="2">
-                        <span class="glyphicon glyphicon-trash"></span> Delete
-                    </a></td>
-            </tr>
-            <tr>
-                <td>Data#3</td>
-                <td>Data#3</td>
-                <td>Data#3</td>
-                <td>Data#3</td>
-                <td class="actions"><a href="javascript:void(0)" class="view" data-id="3">
-                        <span class="glyphicon glyphicon-eye-open"></span> View
-                    </a><a href="javascript:void(0)" class="delete" data-id="3">
-                        <span class="glyphicon glyphicon-trash"></span> Delete
-                    </a></td>
-            </tr>
-            <tr>
-                <td>Data#4</td>
-                <td>Data#4</td>
-                <td>Data#4</td>
-                <td>Data#4</td>
-                <td class="actions"><a href="javascript:void(0)" class="view" data-id="4">
-                        <span class="glyphicon glyphicon-eye-open"></span> View
-                    </a><a href="javascript:void(0)" class="delete" data-id="4">
-                        <span class="glyphicon glyphicon-trash"></span> Delete
-                    </a></td>
-            </tr>
-            <tr>
-                <td>Data#5</td>
-                <td>Data#5</td>
-                <td>Data#5</td>
-                <td>Data#5</td>
-                <td class="actions"><a href="javascript:void(0)" class="view" data-id="5">
-                        <span class="glyphicon glyphicon-eye-open"></span> View
-                    </a><a href="javascript:void(0)" class="delete" data-id="5">
-                        <span class="glyphicon glyphicon-trash"></span> Delete
-                    </a></td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="container">
+        <h1>ContextMenu.js and Spinner.js Example</h1>        
+        <p>Right-click on any row to activate context menu, click spinner and press [Esc] to deactivate spinner.</p>        
+        <table id="sampleList" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Header#1</th>
+                    <th>Header#2</th>
+                    <th>Header#3</th>
+                    <th>Header#4</th>
+                    <th class="actions">Header#5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Data#1</td>
+                    <td>Data#1</td>
+                    <td>Data#1</td>
+                    <td>Data#1</td>
+                    <td class="actions">
+                        <a href="javascript:void(0)" class="view" data-id="1">
+                            <span class="glyphicon glyphicon-eye-open"></span> View
+                        </a> <a href="javascript:void(0)" class="delete" data-id="1">
+                            <span class="glyphicon glyphicon-trash"></span> Delete
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Data#2</td>
+                    <td>Data#2</td>
+                    <td>Data#2</td>
+                    <td>Data#2</td>
+                    <td class="actions"><a href="javascript:void(0)" class="view" data-id="2">
+                            <span class="glyphicon glyphicon-eye-open"></span> View
+                        </a><a href="javascript:void(0)" class="delete" data-id="2">
+                            <span class="glyphicon glyphicon-trash"></span> Delete
+                        </a></td>
+                </tr>
+                <tr>
+                    <td>Data#3</td>
+                    <td>Data#3</td>
+                    <td>Data#3</td>
+                    <td>Data#3</td>
+                    <td class="actions"><a href="javascript:void(0)" class="view" data-id="3">
+                            <span class="glyphicon glyphicon-eye-open"></span> View
+                        </a><a href="javascript:void(0)" class="delete" data-id="3">
+                            <span class="glyphicon glyphicon-trash"></span> Delete
+                        </a></td>
+                </tr>
+                <tr>
+                    <td>Data#4</td>
+                    <td>Data#4</td>
+                    <td>Data#4</td>
+                    <td>Data#4</td>
+                    <td class="actions"><a href="javascript:void(0)" class="view" data-id="4">
+                            <span class="glyphicon glyphicon-eye-open"></span> View
+                        </a><a href="javascript:void(0)" class="delete" data-id="4">
+                            <span class="glyphicon glyphicon-trash"></span> Delete
+                        </a></td>
+                </tr>
+                <tr>
+                    <td>Data#5</td>
+                    <td>Data#5</td>
+                    <td>Data#5</td>
+                    <td>Data#5</td>
+                    <td class="actions"><a href="javascript:void(0)" class="view" data-id="5">
+                            <span class="glyphicon glyphicon-eye-open"></span> View
+                        </a><a href="javascript:void(0)" class="delete" data-id="5">
+                            <span class="glyphicon glyphicon-trash"></span> Delete
+                        </a></td>
+                </tr>
+            </tbody>
+        </table>        
+        
+    </div>
+    
     <script type="text/javascript" src="js/mootools-core-1.4.5.min.js"></script>
     <script type="text/javascript" src="js/mootools-more-1.4.0.1.min.js"></script>
     <script type="text/javascript" src="../ContextMenu.js"></script>
     <script type="text/javascript">
         window.addEvent('domready', function(){
             var list = $('sampleList');
+                list.set('spinner', {'message':'Loading...'});
+            var spinner = list.get('spinner');            
+            spinner.element.setProperty('tabIndex', -1);
+            spinner.element.addEvent('click', function() { this.focus(); });            
+            spinner.element.addEvent('keydown', function(e){ if(e.key=='esc') { spinner.hide(); } })
+            
             list.addEvent('click:relay(a.delete)', function(evt, elem) {
-                alert('Deleting resource #'+elem.get('data-id'));
+                spinner.msg.set('text', 'Deleting profile of resource #'+elem.get('data-id'));                                
+                list.spin();
+                spinner.element.focus();
             });
-            list.addEvent('click:relay(a.view)', function(evt, elem) {
-                alert('Opening profile of resource #'+elem.get('data-id'));
-            });        
+            list.addEvent('click:relay(a.view)', function(evt, elem) {                
+                spinner.msg.set('text', 'Opening profile of resource #'+elem.get('data-id'));                
+                list.spin();           
+                spinner.element.focus();
+            }); 
+            
             new ContextMenu(list, {
                 relay:'tbody tr'
             });
