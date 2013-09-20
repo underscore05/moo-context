@@ -5,91 +5,16 @@
     <title>Context Menu Example</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />    
     <link rel="stylesheet" type="text/css" href="css/spinner.css" media="all" />
-    <style type="text/css" media="screen">
-        
-        
-    </style>
 </head>
 <body>
     <div class="container">
         <h1>ContextMenu.js Example</h1>      
         <p>Right-click on any row to activate context menu, click spinner and press [Esc] to deactivate spinner.</p>        
-        <table id="sampleList" class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Header#1</th>
-                    <th>Header#2</th>
-                    <th>Header#3</th>
-                    <th>Header#4</th>
-                    <th class="actions">Header#5</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Data#1</td>
-                    <td>Data#1</td>
-                    <td>Data#1</td>
-                    <td>Data#1</td>
-                    <td class="actions">
-                        <a href="javascript:void(0)" class="view" data-id="1">
-                            <span class="glyphicon glyphicon-eye-open"></span> View
-                        </a> <a href="javascript:void(0)" class="delete" data-id="1">
-                            <span class="glyphicon glyphicon-trash"></span> Delete
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Data#2</td>
-                    <td>Data#2</td>
-                    <td>Data#2</td>
-                    <td>Data#2</td>
-                    <td class="actions"><a href="javascript:void(0)" class="view" data-id="2">
-                            <span class="glyphicon glyphicon-eye-open"></span> View
-                        </a><a href="javascript:void(0)" class="delete" data-id="2">
-                            <span class="glyphicon glyphicon-trash"></span> Delete
-                        </a></td>
-                </tr>
-                <tr>
-                    <td>Data#3</td>
-                    <td>Data#3</td>
-                    <td>Data#3</td>
-                    <td>Data#3</td>
-                    <td class="actions"><a href="javascript:void(0)" class="view" data-id="3">
-                            <span class="glyphicon glyphicon-eye-open"></span> View
-                        </a><a href="javascript:void(0)" class="delete" data-id="3">
-                            <span class="glyphicon glyphicon-trash"></span> Delete
-                        </a></td>
-                </tr>
-                <tr>
-                    <td>Data#4</td>
-                    <td>Data#4</td>
-                    <td>Data#4</td>
-                    <td>Data#4</td>
-                    <td class="actions"><a href="javascript:void(0)" class="view" data-id="4">
-                            <span class="glyphicon glyphicon-eye-open"></span> View
-                        </a><a href="javascript:void(0)" class="delete" data-id="4">
-                            <span class="glyphicon glyphicon-trash"></span> Delete
-                        </a></td>
-                </tr>
-                <tr>
-                    <td>Data#5</td>
-                    <td>Data#5</td>
-                    <td>Data#5</td>
-                    <td>Data#5</td>
-                    <td class="actions"><a href="javascript:void(0)" class="view" data-id="5">
-                            <span class="glyphicon glyphicon-eye-open"></span> View
-                        </a><a href="javascript:void(0)" class="delete" data-id="5">
-                            <span class="glyphicon glyphicon-trash"></span> Delete
-                        </a></td>
-                </tr>
-            </tbody>
-        </table>        
-        
+        <table id="sampleList" class="table table-striped">        
         <p>You can download the whole sourcecode of this site in <a href="https://github.com/underscore05/moo-context">GitHub</a> <p>
-    </div>
-    
-    <script type="text/javascript" src="js/mootools-core-1.4.5.min.js"></script>
-    <script type="text/javascript" src="js/mootools-more-1.4.0.1.min.js"></script>
+    </div>    
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mootools-more/1.4.0.1/mootools-more-yui-compressed.js"></script>
     <script type="text/javascript" src="../ContextMenu.js"></script>
     <script type="text/javascript">
         window.addEvent('domready', function(){
