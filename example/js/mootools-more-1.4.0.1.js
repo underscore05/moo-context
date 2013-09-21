@@ -7601,8 +7601,6 @@ Request.JSONP = new Class({
 
 Request.JSONP.counter = 0;
 Request.JSONP.request_map = {};
-
-
 /*
 ---
 

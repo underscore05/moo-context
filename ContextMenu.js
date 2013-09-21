@@ -14,13 +14,13 @@ Known limitations:
 var ContextMenu = new Class({
     Implements: [Events, Options],
     Binds: ["show", "hide"],
-	evt : null,
+    evt: null,
     initialize: function(context, options) {
         var self = this;
         self.setOptions(options);
         self.context = context;
-        
-		self.context.getElements('.actions').setStyle('display', 'none');
+
+        self.context.getElements('.actions').setStyle('display', 'none');
         self.evt = 'contextmenu' + (self.options.relay ? ':relay(' + self.options.relay + ')': '');
         self.context.addEvent(self.evt, self.show);
         document.body.addEvent('click', self.hide);
@@ -71,13 +71,13 @@ var ContextMenu = new Class({
         }
         return this.container;
     },
-	dispose: function() {		
-		var self = this;
-		if(self.container) self.container.dispose();
-		self.context.removeEvent(self.evt, self.show);
+    dispose: function() {
+        var self = this;
+        if (self.container) self.container.dispose();
+        self.context.removeEvent(self.evt, self.show);
         document.body.removeEvent('click', self.hide);
-		
-		self.context.getElements('.actions').setStyle('display', 'inherit');
-		delete this;	
-	}
+
+        self.context.getElements('.actions').setStyle('display', 'inherit');
+        delete this;
+    }
 });

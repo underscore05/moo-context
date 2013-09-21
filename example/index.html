@@ -11,7 +11,7 @@
         <h1>ContextMenu.js Example</h1>      
         <p>Right-click on any row to activate context menu, click spinner and press [Esc] to deactivate spinner.</p>
         
-        <div class="panel panel-default" id="samplePanel">
+        <div class="panel panel-primary" id="samplePanel">
             <div class="panel-heading">Data Rows</div>
             <div class="panel-body">
                 <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
@@ -34,90 +34,89 @@
         
         <div class="panel panel-primary">
             <div class="panel-heading">Data Rows</div>
-            <table id="sampleList" class="table table-bordered">
+            <table id="sampleList" class="table">
                 <thead>
                     <tr>
-                        <th><a href="javascript:void(0)">Header#1</a></th>
-                        <th><a href="javascript:void(0)">Header#2</a></th>
-                        <th><a href="javascript:void(0)">Header#3</a></th>
-                        <th><a href="javascript:void(0)">Header#4</a></th>
+                        <th><a href="javascript:void(0)">ID</a></th>
+                        <th><a href="javascript:void(0)">Lastname</a></th>
+                        <th><a href="javascript:void(0)">Firstname</a></th>
+						<th><a href="javascript:void(0)">Middlename</a></th>
+                        <th><a href="javascript:void(0)">Age</a></th>
                         <th class="actions">
                             <a href="javascript:void(0)">Actions</a>
                         </th>
                     </tr>
                 </thead>
-                <tbody>                
-                    <tr>
-                        <td>Data#1</td>
-                        <td>Data#1</td>
-                        <td>Data#1</td>
-                        <td>Data#1</td>
-                        <td class="actions">
-                            <a href="javascript:void(0)" class="view" data-id="1">
-                                <span class="glyphicon glyphicon-eye-open"></span> View
-                            </a> <a href="javascript:void(0)" class="delete" data-id="1">
-                                <span class="glyphicon glyphicon-trash"></span> Delete
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Data#2</td>
-                        <td>Data#2</td>
-                        <td>Data#2</td>
-                        <td>Data#2</td>
-                        <td class="actions"><a href="javascript:void(0)" class="view" data-id="2">
-                                <span class="glyphicon glyphicon-eye-open"></span> View
-                            </a><a href="javascript:void(0)" class="delete" data-id="2">
-                                <span class="glyphicon glyphicon-trash"></span> Delete
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td>Data#3</td>
-                        <td>Data#3</td>
-                        <td>Data#3</td>
-                        <td>Data#3</td>
-                        <td class="actions"><a href="javascript:void(0)" class="view" data-id="3">
-                                <span class="glyphicon glyphicon-eye-open"></span> View
-                            </a><a href="javascript:void(0)" class="delete" data-id="3">
-                                <span class="glyphicon glyphicon-trash"></span> Delete
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td>Data#4</td>
-                        <td>Data#4</td>
-                        <td>Data#4</td>
-                        <td>Data#4</td>
-                        <td class="actions"><a href="javascript:void(0)" class="view" data-id="4">
-                                <span class="glyphicon glyphicon-eye-open"></span> View
-                            </a><a href="javascript:void(0)" class="delete" data-id="4">
-                                <span class="glyphicon glyphicon-trash"></span> Delete
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td>Data#5</td>
-                        <td>Data#5</td>
-                        <td>Data#5</td>
-                        <td>Data#5</td>
-                        <td class="actions"><a href="javascript:void(0)" class="view" data-id="5">
-                                <span class="glyphicon glyphicon-eye-open"></span> View
-                            </a><a href="javascript:void(0)" class="delete" data-id="5">
-                                <span class="glyphicon glyphicon-trash"></span> Delete
-                            </a></td>
-                    </tr>
-                </tbody>
+                <tbody></tbody>
+                <tfoot>
+                        <tr class="hidden row-template">
+							<td class="tdId"></td>
+                            <td class="tdLname"></td>
+                            <td class="tdFname"></td>
+							<td class="tdMname"></td>                            
+                            <td class="tdAge">#temp</td>
+                            <td class="actions">
+                                <a href="javascript:void(0)" class="view" data-id="0">
+                                    <span class="glyphicon glyphicon-eye-open"></span> View
+                                </a> <a href="javascript:void(0)" class="delete" data-id="0">
+                                    <span class="glyphicon glyphicon-trash"></span> Delete
+                                </a>
+                            </td>
+                        </tr>
+                </tfoot>
             </table>            
         </div>
+        <a href="javascript:void(0)" class="btn btn-primary" id="btnAddRow">Add Row</a>
         <p>You can download the whole sourcecode of this site in <a href="https://github.com/underscore05/moo-context">GitHub</a> <p>
     </div>
-    
+
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mootools-more/1.4.0.1/mootools-more-yui-compressed.js"></script>
-    
-    <!--<script type="text/javascript" src="js/mootools-core-1.4.5.min.js"></script>
-    <script type="text/javascript" src="js/mootools-more-1.4.0.1.js"></script>-->
+
+	<!--
+    <script type="text/javascript" src="js/mootools-core-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/mootools-more-1.4.0.1.js"></script>
+	-->
     <script type="text/javascript" src="../ContextMenu.js"></script>
     <script type="text/javascript">
         "use strict";
+		
+		Request.JSONP = Class.refactor(Request.JSONP, {
+			options: {
+				useSpinner: false,
+				spinnerOptions: {},
+				spinnerTarget: false
+			},
+
+			initialize: function(options){
+				this._send = this.send;
+				this.send = function(options){
+					var spinner = this.getSpinner();
+					if (spinner) spinner.chain(this._send.pass(options, this)).show();
+					else this._send(options);
+					return this;
+				};
+				this.previous(options);
+			},
+
+			getSpinner: function(){
+				if (!this.spinner){
+					var update = document.id(this.options.spinnerTarget) || document.id(this.options.update);
+					if (this.options.useSpinner && update){
+						if(!update.get('spinner')){
+							update.set('spinner', this.options.spinnerOptions);
+						}				
+						var spinner = this.spinner = update.get('spinner');
+						['complete', 'exception', 'cancel', 'timeout'].each(function(event){
+							this.addEvent(event, spinner.hide.bind(spinner));
+						}, this);
+					}
+				}
+				return this.spinner;
+			}
+
+		});		
+
         window.addEvent('domready', function(){
             var list = $('sampleList');            
                 list.set('spinner', {'message':'Loading...'});
@@ -145,19 +144,16 @@
             var mTable = new HtmlTable(list, {
                                 selectable:true, 
                                 sortable:true, 
-                                classRowSelected:'danger'}); 
-                        
-            var panel = $('samplePanel');
+                                classRowSelected:'success'
+							});                        
             
+            var panel = $('samplePanel');            
             ['default', 'primary', 'info', 'warning', 'danger'].each(function(className){
                 panel.addEvent('click:relay(a.'+className+')', function(evt) {
                     panel.set('class', null);
                     panel.addClass('panel panel-'+className);
                 });
             });
-            
-            new ContextMenu(list, {relay:'tbody tr'});
-            
             var toggleContext = $('toggleContext');
                 toggleContext.addEvent('click', function(){
                     if(this.retrieve('ctx')){
@@ -167,8 +163,44 @@
                         this.store('ctx', new ContextMenu(panel));
                     }                    
                 });
+            new ContextMenu(list, {relay:'tbody tr'});                                                
             
+            var rowTpl = list.getElement('tfoot tr.row-template');
+			var req = new Request.JSONP({
+                url: 'data.php',					
+                useSpinner: true,
+				spinnerTarget: list,  
+				timeout: 20 * 1000,                    
+				onTimeout: function(src) {}
+            });
+            $('btnAddRow').addEvent('click', function(){                
+				list.get('spinner').msg.set('text', 'Loading...');
+				req.send();
+				req.addEvent('complete', function(data) {
+ 					data.rs.map(function(r) {
+                        var tpl = rowTpl.clone();
+                        tpl.removeClass('hidden');
+						tpl.getElement('.tdId').set('text', r.id);
+                        tpl.getElement('.tdLname').set('text', r.lname);
+                        tpl.getElement('.tdFname').set('text', r.fname);
+						tpl.getElement('.tdMname').set('text', r.mname);
+						tpl.getElement('.tdAge').set('text', r.age);
+                        tpl.getElement('a.delete').set('data-id', r.id);
+                        tpl.getElement('a.view').set('data-id', r.id);
+                        mTable.push(tpl); 
+                    });             
+                });	
+            });            
         });
     </script>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
 </body>
 </html>
