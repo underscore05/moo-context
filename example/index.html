@@ -9,106 +9,165 @@
 <body>
     <div class="container">
         <h1>ContextMenu.js Example</h1>      
-        <p>Right-click on any row to activate context menu, click spinner and press [Esc] to deactivate spinner.</p>        
-        <table id="sampleList" class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Header#1</th>
-                    <th>Header#2</th>
-                    <th>Header#3</th>
-                    <th>Header#4</th>
-                    <th class="actions">Header#5</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Data#1</td>
-                    <td>Data#1</td>
-                    <td>Data#1</td>
-                    <td>Data#1</td>
-                    <td class="actions">
-                        <a href="javascript:void(0)" class="view" data-id="1">
-                            <span class="glyphicon glyphicon-eye-open"></span> View
-                        </a> <a href="javascript:void(0)" class="delete" data-id="1">
-                            <span class="glyphicon glyphicon-trash"></span> Delete
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Data#2</td>
-                    <td>Data#2</td>
-                    <td>Data#2</td>
-                    <td>Data#2</td>
-                    <td class="actions"><a href="javascript:void(0)" class="view" data-id="2">
-                            <span class="glyphicon glyphicon-eye-open"></span> View
-                        </a><a href="javascript:void(0)" class="delete" data-id="2">
-                            <span class="glyphicon glyphicon-trash"></span> Delete
-                        </a></td>
-                </tr>
-                <tr>
-                    <td>Data#3</td>
-                    <td>Data#3</td>
-                    <td>Data#3</td>
-                    <td>Data#3</td>
-                    <td class="actions"><a href="javascript:void(0)" class="view" data-id="3">
-                            <span class="glyphicon glyphicon-eye-open"></span> View
-                        </a><a href="javascript:void(0)" class="delete" data-id="3">
-                            <span class="glyphicon glyphicon-trash"></span> Delete
-                        </a></td>
-                </tr>
-                <tr>
-                    <td>Data#4</td>
-                    <td>Data#4</td>
-                    <td>Data#4</td>
-                    <td>Data#4</td>
-                    <td class="actions"><a href="javascript:void(0)" class="view" data-id="4">
-                            <span class="glyphicon glyphicon-eye-open"></span> View
-                        </a><a href="javascript:void(0)" class="delete" data-id="4">
-                            <span class="glyphicon glyphicon-trash"></span> Delete
-                        </a></td>
-                </tr>
-                <tr>
-                    <td>Data#5</td>
-                    <td>Data#5</td>
-                    <td>Data#5</td>
-                    <td>Data#5</td>
-                    <td class="actions"><a href="javascript:void(0)" class="view" data-id="5">
-                            <span class="glyphicon glyphicon-eye-open"></span> View
-                        </a><a href="javascript:void(0)" class="delete" data-id="5">
-                            <span class="glyphicon glyphicon-trash"></span> Delete
-                        </a></td>
-                </tr>
-            </tbody>
-        </table>        
+        <p>Right-click on any row to activate context menu, click spinner and press [Esc] to deactivate spinner.</p>
+        
+        <div class="panel panel-default" id="samplePanel">
+            <div class="panel-heading">Data Rows</div>
+            <div class="panel-body">
+                <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+                The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+                The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+                <p>
+                    <div></div>
+                    <div class="actions">          
+                        <a href="javascript:void(0)" class="default">Default</a>
+                        <a href="javascript:void(0)" class="primary">Primary</a>
+                        <a href="javascript:void(0)" class="info">Info</a>
+                        <a href="javascript:void(0)" class="danger">Danger</a>
+                        <a href="javascript:void(0)" class="warning">Warning</a>
+                    </div>
+                </p>
+                
+                <a href="javascript:void(0)" class="btn btn-primary" id="toggleContext">Toggle Context Menu</a>
+            </div>            
+        </div>
+        
+        <div class="panel panel-primary">
+            <div class="panel-heading">Data Rows</div>
+            <table id="sampleList" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th><a href="javascript:void(0)">Header#1</a></th>
+                        <th><a href="javascript:void(0)">Header#2</a></th>
+                        <th><a href="javascript:void(0)">Header#3</a></th>
+                        <th><a href="javascript:void(0)">Header#4</a></th>
+                        <th class="actions">
+                            <a href="javascript:void(0)">Actions</a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>                
+                    <tr>
+                        <td>Data#1</td>
+                        <td>Data#1</td>
+                        <td>Data#1</td>
+                        <td>Data#1</td>
+                        <td class="actions">
+                            <a href="javascript:void(0)" class="view" data-id="1">
+                                <span class="glyphicon glyphicon-eye-open"></span> View
+                            </a> <a href="javascript:void(0)" class="delete" data-id="1">
+                                <span class="glyphicon glyphicon-trash"></span> Delete
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Data#2</td>
+                        <td>Data#2</td>
+                        <td>Data#2</td>
+                        <td>Data#2</td>
+                        <td class="actions"><a href="javascript:void(0)" class="view" data-id="2">
+                                <span class="glyphicon glyphicon-eye-open"></span> View
+                            </a><a href="javascript:void(0)" class="delete" data-id="2">
+                                <span class="glyphicon glyphicon-trash"></span> Delete
+                            </a></td>
+                    </tr>
+                    <tr>
+                        <td>Data#3</td>
+                        <td>Data#3</td>
+                        <td>Data#3</td>
+                        <td>Data#3</td>
+                        <td class="actions"><a href="javascript:void(0)" class="view" data-id="3">
+                                <span class="glyphicon glyphicon-eye-open"></span> View
+                            </a><a href="javascript:void(0)" class="delete" data-id="3">
+                                <span class="glyphicon glyphicon-trash"></span> Delete
+                            </a></td>
+                    </tr>
+                    <tr>
+                        <td>Data#4</td>
+                        <td>Data#4</td>
+                        <td>Data#4</td>
+                        <td>Data#4</td>
+                        <td class="actions"><a href="javascript:void(0)" class="view" data-id="4">
+                                <span class="glyphicon glyphicon-eye-open"></span> View
+                            </a><a href="javascript:void(0)" class="delete" data-id="4">
+                                <span class="glyphicon glyphicon-trash"></span> Delete
+                            </a></td>
+                    </tr>
+                    <tr>
+                        <td>Data#5</td>
+                        <td>Data#5</td>
+                        <td>Data#5</td>
+                        <td>Data#5</td>
+                        <td class="actions"><a href="javascript:void(0)" class="view" data-id="5">
+                                <span class="glyphicon glyphicon-eye-open"></span> View
+                            </a><a href="javascript:void(0)" class="delete" data-id="5">
+                                <span class="glyphicon glyphicon-trash"></span> Delete
+                            </a></td>
+                    </tr>
+                </tbody>
+            </table>            
+        </div>
         <p>You can download the whole sourcecode of this site in <a href="https://github.com/underscore05/moo-context">GitHub</a> <p>
     </div>
     
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mootools-more/1.4.0.1/mootools-more-yui-compressed.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mootools-more/1.4.0.1/mootools-more-yui-compressed.js"></script>
+    
+    <!--<script type="text/javascript" src="js/mootools-core-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/mootools-more-1.4.0.1.js"></script>-->
     <script type="text/javascript" src="../ContextMenu.js"></script>
     <script type="text/javascript">
+        "use strict";
         window.addEvent('domready', function(){
-            var list = $('sampleList');
+            var list = $('sampleList');            
                 list.set('spinner', {'message':'Loading...'});
             var spinner = list.get('spinner');            
+
             spinner.element.setProperty('tabIndex', -1);
             spinner.element.addEvent('click', function() { this.focus(); });            
             spinner.element.addEvent('keydown', function(e){ if(e.key=='esc') { spinner.hide(); } })
             
             list.addEvent('click:relay(a.delete)', function(evt, elem) {
-                spinner.msg.set('text', 'Deleting profile of resource #'+elem.get('data-id'));                                
+                spinner.msg.set('text', 'Deleting profile of resource #'+elem.get('data-id'));                
                 list.spin();
+                setTimeout(function(){
+                   elem.getParent('tr').dispose(); 
+                   list.unspin();
+                }, 1000);
                 spinner.element.focus();
             });
             list.addEvent('click:relay(a.view)', function(evt, elem) {                
                 spinner.msg.set('text', 'Opening profile of resource #'+elem.get('data-id'));                
                 list.spin();           
                 spinner.element.focus();
-            }); 
-            
-            new ContextMenu(list, {
-                relay:'tbody tr'
             });
+            
+            var mTable = new HtmlTable(list, {
+                                selectable:true, 
+                                sortable:true, 
+                                classRowSelected:'danger'}); 
+                        
+            var panel = $('samplePanel');
+            
+            ['default', 'primary', 'info', 'warning', 'danger'].each(function(className){
+                panel.addEvent('click:relay(a.'+className+')', function(evt) {
+                    panel.set('class', null);
+                    panel.addClass('panel panel-'+className);
+                });
+            });
+            
+            new ContextMenu(list, {relay:'tbody tr'});
+            
+            var toggleContext = $('toggleContext');
+                toggleContext.addEvent('click', function(){
+                    if(this.retrieve('ctx')){
+                        this.retrieve('ctx').dispose();
+                        this.store('ctx', null);
+                    } else {
+                        this.store('ctx', new ContextMenu(panel));
+                    }                    
+                });
+            
         });
     </script>
 </body>
